@@ -5,7 +5,9 @@ import com.dependency.injection.rebuild.dir.controllers.PropertyInjectionControl
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 
+@ComponentScan(basePackages = {"com.dependency.injection"})
 @SpringBootApplication
 public class DirApplication {
 
