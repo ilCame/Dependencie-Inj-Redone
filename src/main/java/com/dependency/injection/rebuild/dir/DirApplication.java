@@ -2,6 +2,7 @@ package com.dependency.injection.rebuild.dir;
 
 import com.dependency.injection.rebuild.dir.controllers.MyController;
 import com.dependency.injection.rebuild.dir.controllers.PropertyInjectionController;
+import com.dependency.injection.rebuild.dir.controllers.SettingInjectedController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -20,6 +21,10 @@ public class DirApplication {
 		System.out.println("---- Primary Bean ----");
 		PropertyInjectionController propertyInjectionController = (PropertyInjectionController)  ctx.getBean("propertyInjectionController");
 		System.out.println(propertyInjectionController.getGreeting());
+
+		System.out.println("----    Setter    ----");
+		SettingInjectedController settingInjectedController = (SettingInjectedController) ctx.getBean("settingInjectedController");
+		System.out.println(settingInjectedController.getGreeting());
 	}
 
 }
